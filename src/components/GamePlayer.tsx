@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { allGames as games } from "@/data/games";
 
-const CDN = "https://mattiasmicu.github.io/notsocrazy/public";
+const CDN = "https://raw.githubusercontent.com/mattiasmicu/notsocrazy/3396555d6e7856c4c262e4e6973610bdb063625c/public/";
 
 // Game Card with hover effect
 const GameThumb = ({ game }: { game: typeof games[0] }) => {
