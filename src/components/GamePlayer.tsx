@@ -2,6 +2,8 @@ import { useState, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import { allGames as games } from "@/data/games";
 
+const CDN = "https://mattiasmicu.github.io/notsocrazy/public";
+
 // Game Card with hover effect
 const GameThumb = ({ game }: { game: typeof games[0] }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -17,7 +19,7 @@ const GameThumb = ({ game }: { game: typeof games[0] }) => {
       <div style={{ position: 'relative', borderRadius: '8px', overflow: 'hidden' }}>
         <div style={{ aspectRatio: '16/9', background: '#212233', position: 'relative' }}>
           <img
-            src={game.thumbnail || `/games/${game.id}/thumbnail.jpg`}
+            src={`${CDN}/games/${game.id}/thumbnail.jpg`}
             alt=""
             loading="lazy"
             style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
@@ -257,9 +259,10 @@ export default function GamePlayer() {
               }}
             >
               <iframe
-                src={game.url || `/games/${game.id}/index.html`}
+                src={game.path}
                 style={{ width: "100%", height: "100%", border: "none" }}
                 allowFullScreen
+                allow="cross-origin-isolated"
               />
               <div style={{
                 display: hideBar ? "none" : "flex",
