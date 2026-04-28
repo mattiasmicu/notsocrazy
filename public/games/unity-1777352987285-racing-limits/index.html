@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Limits</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+        }
+        #gameCanvas {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script src="Build/61938cebd4d9922d703f11c1da3e3940.loader.js"></script>
+    <script>
+        createUnityInstance(document.getElementById("gameCanvas"), {
+            dataUrl: "Build/a2b57cd91d4ecd56110d7201777abacf.data.br",
+            frameworkUrl: "Build/aab4f58115eaa21017e0d3257de18e16.framework.js.br",
+            codeUrl: "Build/7fd9e3d5addd51a28026d6032d67d9b2.wasm.br",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "CrazyGames",
+            productName: "Racing Limits",
+            productVersion: "1.0"
+        }).then((unityInstance) => {
+            console.log("Game loaded successfully");
+        }).catch((message) => {
+            console.error("Unity loading error:", message);
+        });
+    </script>
+</body>
+</html>

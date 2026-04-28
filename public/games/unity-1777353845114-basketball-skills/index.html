@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Skills</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+        }
+        #gameCanvas {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script src="Build/BSK.loader.js"></script>
+    <script>
+        createUnityInstance(document.getElementById("gameCanvas"), {
+            dataUrl: "Build/b270bc58c104bea9c0ef4b895c1572db.data.br",
+            frameworkUrl: "Build/",
+            codeUrl: "Build/a9e11e6ef65ea8b185438ab55bbfe63d.wasm.br",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "CrazyGames",
+            productName: "Basketball Skills",
+            productVersion: "1.0"
+        }).then((unityInstance) => {
+            console.log("Game loaded successfully");
+        }).catch((message) => {
+            console.error("Unity loading error:", message);
+        });
+    </script>
+</body>
+</html>

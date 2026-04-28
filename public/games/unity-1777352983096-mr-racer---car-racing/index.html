@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mr. Racer - Car Racing</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+        }
+        #gameCanvas {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script src="Build/MRR_CrazyGames_8.loader.js"></script>
+    <script>
+        createUnityInstance(document.getElementById("gameCanvas"), {
+            dataUrl: "Build/e4c8b93adc9962a332dea071b482aa9b.data.br",
+            frameworkUrl: "Build/",
+            codeUrl: "Build/161263100a9f5d284f13eb1d84ac504f.wasm.br",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "CrazyGames",
+            productName: "Mr. Racer - Car Racing",
+            productVersion: "1.0"
+        }).then((unityInstance) => {
+            console.log("Game loaded successfully");
+        }).catch((message) => {
+            console.error("Unity loading error:", message);
+        });
+    </script>
+</body>
+</html>

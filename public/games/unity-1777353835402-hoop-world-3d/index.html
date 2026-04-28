@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoop World 3D</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+        }
+        #gameCanvas {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script src="Build/bb0d9ecdb05db3e84da20bd14a4f84dc.loader.js"></script>
+    <script>
+        createUnityInstance(document.getElementById("gameCanvas"), {
+            dataUrl: "Build/faf4657acd0805c5ab0cf48f1c065b47.data.br",
+            frameworkUrl: "Build/b309df5b4a4207a1fc9c889ab7114e99.framework.js.br",
+            codeUrl: "Build/fbcd284ad0a2968de8a61d268d8d2a9d.wasm.br",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "CrazyGames",
+            productName: "Hoop World 3D",
+            productVersion: "1.0"
+        }).then((unityInstance) => {
+            console.log("Game loaded successfully");
+        }).catch((message) => {
+            console.error("Unity loading error:", message);
+        });
+    </script>
+</body>
+</html>

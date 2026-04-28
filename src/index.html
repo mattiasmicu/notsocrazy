@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./logo.svg" />
+    <title>Startsida - Classroom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Nunito', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            },
+            colors: {
+              background: "#0C0D14",
+              foreground: "#EFF0F7",
+              card: "#1A1B28",
+              "card-foreground": "#EFF0F7",
+              primary: {
+                DEFAULT: "#6842FF",
+                foreground: "#EFF0F7",
+              },
+              secondary: {
+                DEFAULT: "#212233",
+                foreground: "#AAADBE",
+              },
+              muted: {
+                DEFAULT: "#212233",
+                foreground: "#BDBFCE",
+              },
+              accent: {
+                DEFAULT: "#6842FF",
+                foreground: "#EFF0F7",
+              },
+              border: "#2F3148",
+              input: "#2F3148",
+              ring: "#6842FF",
+            },
+            borderRadius: {
+              lg: "10px",
+              md: "8px",
+              sm: "6px",
+            },
+          },
+        },
+      }
+    </script>
+    <link rel="stylesheet" href="./index.css" />
+    <script type="module" src="./frontend.tsx" async></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sky Riders Unblocked</title>
+    <style>
+        body { margin: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; overflow: hidden; }
+        canvas { width: 100%; height: 100%; background: #000; }
+    </style>
+</head>
+<body>
+    <canvas id="unity-canvas"></canvas>
+
+    <script>
+        // BYPASS ATTEMPT: We try to trick the SDK into thinking it's on CrazyGames
+        window.crazygames = { sdk: { requestAd: () => {}, init: () => {} } };
+        
+        // Load the Loader
+        const script = document.createElement("script");
+        script.src = "https://crazygames.com";
+        script.onload = () => {
+            createUnityInstance(document.querySelector("#unity-canvas"), {
+                dataUrl: "https://crazygames.com",
+                frameworkUrl: "https://crazygames.com",
+                codeUrl: "https://crazygames.com",
+                streamingAssetsUrl: "https://crazygames.com",
+                companyName: "buk",
+                productName: "Sky Riders",
+            }).then((instance) => {
+                console.log("Bypass successful!");
+            }).catch((err) => {
+                console.error("Sitelock detected or CORS error:", err);
+            });
+        };
+        document.body.appendChild(script);
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sky Riders</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            overflow: hidden;
+        }
+        #gameCanvas {
+            width: 100vw;
+            height: 100vh;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <script src="Build/a9ca25dad32ea4465298c2a33b5cc5e4.loader.js"></script>
+    <script>
+        createUnityInstance(document.getElementById("gameCanvas"), {
+            dataUrl: "Build/astc_1925c7250cdfdbd8df382b81c944041c.data.br",
+            frameworkUrl: "Build/5066719154d58ab5ebaa57b6d0fbced3.framework.js.br",
+            codeUrl: "Build/b6a88957bd0da804399c52d3f24e4c48.wasm.br",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "CrazyGames",
+            productName: "Sky Riders",
+            productVersion: "1.0"
+        }).then((unityInstance) => {
+            console.log("Game loaded successfully");
+        }).catch((message) => {
+            console.error("Unity loading error:", message);
+        });
+    </script>
+</body>
+</html>

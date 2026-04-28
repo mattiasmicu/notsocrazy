@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Game File Capturer</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    h1 { color: #333; }
+    .container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .step {
+      margin: 20px 0;
+      padding: 15px;
+      background: #f8f9fa;
+      border-radius: 6px;
+      border-left: 4px solid #007bff;
+    }
+    .step h3 { margin-top: 0; }
+    input, button {
+      padding: 10px 15px;
+      margin: 5px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover { background: #0056b3; }
+    button:disabled { background: #ccc; }
+    #status {
+      margin: 20px 0;
+      padding: 10px;
+      background: #e3f2fd;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    #gameFrame {
+      width: 100%;
+      height: 600px;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+    .file-list {
+      max-height: 300px;
+      overflow-y: auto;
+      background: #f8f9fa;
+      padding: 10px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 12px;
+    }
+    .file-item {
+      padding: 4px 8px;
+      margin: 2px 0;
+      background: white;
+      border-radius: 3px;
+    }
+    .captured { border-left: 3px solid #28a745; }
+    .pending { border-left: 3px solid #ffc107; }
+    #downloadBtn {
+      background: #28a745;
+      font-size: 16px;
+      padding: 15px 30px;
+    }
+    #downloadBtn:hover { background: #218838; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎮 Game File Capturer</h1>
+    <p>Play a game and this tool will capture all downloaded files for offline use.</p>
+    
+    <div class="step">
+      <h3>Step 1: Enter Game URL</h3>
+      <p>Paste the game URL from Crazy Games or any HTML5 game site:</p>
+      <input type="url" id="gameUrl" placeholder="https://www.crazygames.com/game/..." style="width: 400px;">
+      <button onclick="loadGame()">Load Game</button>
+    </div>
+
+    <div id="captureSection" class="step hidden">
+      <h3>Step 2: Play the Game</h3>
+      <p>The game will load below. <strong>Play for at least 1-2 minutes</strong> to ensure all assets load.</p>
+      <div id="status">Waiting for game to load...</div>
+      <div class="file-list" id="fileList"></div>
+    </div>
+
+    <div id="downloadSection" class="step hidden">
+      <h3>Step 3: Save Captured Files</h3>
+      <p><strong id="capturedCount">0</strong> files captured!</p>
+      <input type="text" id="gameName" placeholder="Enter game name...">
+      <button id="downloadBtn" onclick="downloadGame()">💾 Download Game Package</button>
+    </div>
+
+    <iframe id="gameFrame" class="hidden" sandbox="allow-scripts allow-same-origin allow-popups"></iframe>
+  </div>
+
+  <script>
+    const capturedFiles = new Map();
+    let originalFetch = window.fetch;
+    let originalXHR = window.XMLHttpRequest;
+
+    function loadGame() {
+      const url = document.getElementById('gameUrl').value;
+      if (!url) {
+        alert('Please enter a game URL');
+        return;
+      }
+
+      // Reset
+      capturedFiles.clear();
+      document.getElementById('captureSection').classList.remove('hidden');
+      document.getElementById('gameFrame').classList.remove('hidden');
+      document.getElementById('downloadSection').classList.add('hidden');
+      
+      // Setup interception BEFORE loading game
+      setupInterception();
+      
+      // Load game through a proxy that captures files
+      const proxyUrl = `/api/proxy-game?url=${encodeURIComponent(url)}`;
+      document.getElementById('gameFrame').src = proxyUrl;
+      
+      updateStatus('Game loading... Click around and play for 1-2 minutes!');
+    }
+
+    function setupInterception() {
+      // Intercept fetch
+      window.fetch = async function(...args) {
+        const url = args[0];
+        const response = await originalFetch.apply(this, args);
+        
+        // Clone and capture
+        const clone = response.clone();
+        captureFile(url, clone);
+        
+        return response;
+      };
+
+      // Intercept XHR (many games use this)
+      const XHR = window.XMLHttpRequest;
+      window.XMLHttpRequest = function() {
+        const xhr = new XHR();
+        const originalOpen = xhr.open;
+        const originalSend = xhr.send;
+        
+        let requestUrl;
+        
+        xhr.open = function(method, url) {
+          requestUrl = url;
+          return originalOpen.apply(this, arguments);
+        };
+        
+        xhr.send = function() {
+          const originalOnLoad = xhr.onload;
+          
+          xhr.onload = function() {
+            if (xhr.response) {
+              captureFile(requestUrl, xhr.response, xhr.getResponseHeader('content-type'));
+            }
+            if (originalOnLoad) originalOnLoad.apply(this, arguments);
+          };
+          
+          return originalSend.apply(this, arguments);
+        };
+        
+        return xhr;
+      };
+    }
+
+    async function captureFile(url, responseOrData, contentType) {
+      if (capturedFiles.has(url)) return;
+      
+      try {
+        let data;
+        let type = contentType || 'application/octet-stream';
+        
+        if (responseOrData instanceof Response) {
+          const blob = await responseOrData.blob();
+          data = blob;
+          type = type || blob.type;
+        } else if (typeof responseOrData === 'string') {
+          data = new Blob([responseOrData], { type: 'text/plain' });
+        } else {
+          data = new Blob([responseOrData], { type });
+        }
+        
+        capturedFiles.set(url, { data, type, size: data.size });
+        updateFileList();
+        
+        // Show download button after first file
+        if (capturedFiles.size >= 5) {
+          document.getElementById('downloadSection').classList.remove('hidden');
+          document.getElementById('capturedCount').textContent = capturedFiles.size;
+        }
+        
+      } catch (e) {
+        console.error('Failed to capture:', url, e);
+      }
+    }
+
+    function updateStatus(msg) {
+      document.getElementById('status').textContent = msg;
+    }
+
+    function updateFileList() {
+      const list = document.getElementById('fileList');
+      list.innerHTML = Array.from(capturedFiles.keys()).map(url => {
+        const file = capturedFiles.get(url);
+        const name = url.split('/').pop() || url;
+        const size = (file.size / 1024).toFixed(1);
+        return `<div class="file-item captured">${name} (${size} KB)</div>`;
+      }).join('');
+    }
+
+    async function downloadGame() {
+      const gameName = document.getElementById('gameName').value || 'captured-game';
+      const safeName = gameName.replace(/[^a-z0-9]/gi, '-').toLowerCase();
+      
+      // Create a zip-like structure using JSZip or manual download
+      // For now, download files individually
+      
+      let downloaded = 0;
+      for (const [url, file] of capturedFiles) {
+        const filename = url.split('/').pop() || `file-${downloaded}`;
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(file.data);
+        a.download = `${safeName}/${filename}`;
+        a.click();
+        
+        downloaded++;
+        updateStatus(`Downloading ${downloaded}/${capturedFiles.size} files...`);
+        await new Promise(r => setTimeout(r, 100));
+      }
+      
+      updateStatus(`✅ Downloaded ${downloaded} files! Move them to public/games/${safeName}/`);
+    }
+  </script>
+</body>
+</html>
