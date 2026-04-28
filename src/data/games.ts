@@ -3,6 +3,8 @@ import type { Game } from "@/types/game";
 // Auto-generated games from CrazyGames scraper
 // Generated on: 2026-04-28T05:24:15.649Z
 
+const CDN = "https://mattiasmicu.github.io/notsocrazy/public";
+
 export const games: Game[] = [
   {
     "id": "unity-1777352809967-space-waves",
@@ -11,7 +13,7 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.263653297403672,
     "plays": 2,
-    "path": "/games/unity-1777352809967-space-waves/index.html"
+    "path": `${CDN}/games/unity-1777352809967-space-waves/index.html`
   },
   {
     "id": "unity-1777352816216-traffic-rider-vvq",
@@ -20,7 +22,7 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.73862736865367,
     "plays": 2,
-    "path": "/games/unity-1777352816216-traffic-rider-vvq/index.html"
+    "path": `${CDN}/games/unity-1777352816216-traffic-rider-vvq/index.html`
   },
   {
     "id": "html-1777352823508-rocketgoal-io",
@@ -29,7 +31,7 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.324661470306053,
     "plays": 2,
-    "path": "/games/html-1777352823508-rocketgoal-io/index.html"
+    "path": `${CDN}/games/html-1777352823508-rocketgoal-io/index.html`
   },
   {
     "id": "html-1777352826254-open-house",
@@ -38,7 +40,7 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.961518729202038,
     "plays": 2,
-    "path": "/games/html-1777352826254-open-house/index.html"
+    "path": `${CDN}/games/html-1777352826254-open-house/index.html`
   },
   {
     "id": "unity-1777352836146-sky-riders-buk",
@@ -47,7 +49,7 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.819683132363033,
     "plays": 2,
-    "path": "/games/unity-1777352836146-sky-riders-buk/index.html"
+    "path": `${CDN}/games/unity-1777352836146-sky-riders-buk/index.html`
   },
   {
     "id": "html-1777352840674-8-ball-pool-billiards-multiplayer",
@@ -56,7 +58,7 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.683481302856724,
     "plays": 2,
-    "path": "/games/html-1777352840674-8-ball-pool-billiards-multiplayer/index.html"
+    "path": `${CDN}/games/html-1777352840674-8-ball-pool-billiards-multiplayer/index.html`
   },
   {
     "id": "unity-1777352843881-farm-ring-idle",
@@ -65,7 +67,7 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.247649563705637,
     "plays": 2,
-    "path": "/games/unity-1777352843881-farm-ring-idle/index.html"
+    "path": `${CDN}/games/unity-1777352843881-farm-ring-idle/index.html`
   },
   {
     "id": "html-1777352847510-worldguessr",
@@ -74,7 +76,7 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.329416879177341,
     "plays": 2,
-    "path": "/games/html-1777352847510-worldguessr/index.html"
+    "path": `${CDN}/games/html-1777352847510-worldguessr/index.html`
   },
   {
     "id": "unity-1777352850784-rally-racer-dirt",
@@ -83,25 +85,25 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.309419324557102,
     "plays": 2,
-    "path": "/games/unity-1777352850784-rally-racer-dirt/index.html"
+    "path": `${CDN}/games/unity-1777352850784-rally-racer-dirt/index.html`
   },
   {
     "id": "unity-1777352857850-basketball-orbit",
     "title": "Basketball Orbit",
-    "description": "Basketball Orbit is an exhilarating sports basketball simulation game in our sports category, where you aim to launch basketballs to unbelievable heights, even beyond Earth’s atmosphere! Take on thrilling one-shot basketball challenges, conquer tricky levels, and perfect your shooting technique.",
+    "description": "Basketball Orbit is an exhilarating sports basketball simulation game in our sports category, where you aim to launch basketballs to unbelievable heights, even beyond Earth's atmosphere! Take on thrilling one-shot basketball challenges, conquer tricky levels, and perfect your shooting technique.",
     "category": "Other",
     "rating": 4.788895939814804,
     "plays": 2,
-    "path": "/games/unity-1777352857850-basketball-orbit/index.html"
+    "path": `${CDN}/games/unity-1777352857850-basketball-orbit/index.html`
   },
   {
     "id": "unity-1777352861637-super-star-car",
     "title": "Super Star Car",
-    "description": "Super Star Car is a driving Formula 1 racing game that puts you in the driver’s seat of high-speed action with a vast selection of cars and iconic circuits. Start your career as a professional racer and climb the ranks through thrilling campaign races, upgrading your car to enhance performance along the way.",
+    "description": "Super Star Car is a driving Formula 1 racing game that puts you in the driver's seat of high-speed action with a vast selection of cars and iconic circuits. Start your career as a professional racer and climb the ranks through thrilling campaign races, upgrading your car to enhance performance along the way.",
     "category": "Other",
     "rating": 4.026467281933127,
     "plays": 2,
-    "path": "/games/unity-1777352861637-super-star-car/index.html"
+    "path": `${CDN}/games/unity-1777352861637-super-star-car/index.html`
   },
   {
     "id": "unity-1777352870850-mini-golf-club",
@@ -110,25 +112,25 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.431728542491728,
     "plays": 3,
-    "path": "/games/unity-1777352870850-mini-golf-club/index.html"
+    "path": `${CDN}/games/unity-1777352870850-mini-golf-club/index.html`
   },
   {
     "id": "unity-1777352983096-mr-racer---car-racing",
     "title": "Mr. Racer - Car Racing",
-    "description": "Mr Racer - Car Racing is a fast-paced driving game where you speed through traffic-packed streets in sleek supercars, taking on challenges to prove you&amp;#39;re the ultimate racer.How to Play Mr RacerStart your racing journey with speed into the action! In Mr.",
+    "description": "Mr Racer - Car Racing is a fast-paced driving game where you speed through traffic-packed streets in sleek supercars, taking on challenges to prove you&amp;#39;re the ultimate racer.",
     "category": "Other",
     "rating": 4.359819992742802,
     "plays": 2,
-    "path": "/games/unity-1777352983096-mr-racer---car-racing/index.html"
+    "path": `${CDN}/games/unity-1777352983096-mr-racer---car-racing/index.html`
   },
   {
     "id": "unity-1777352987285-racing-limits",
     "title": "Racing Limits",
-    "description": "Racing Limits is a racing game that lets you push your skills to the max. Race and overtake vehicles in city and highway traffic with four thrilling game modes:",
+    "description": "Racing Limits is a racing game that lets you push your skills to the max. Race and overtake vehicles in city and highway traffic with four thrilling game modes.",
     "category": "Other",
     "rating": 4.59507220367655,
     "plays": 2,
-    "path": "/games/unity-1777352987285-racing-limits/index.html"
+    "path": `${CDN}/games/unity-1777352987285-racing-limits/index.html`
   },
   {
     "id": "unity-1777352998344-mx-offroad-master",
@@ -137,7 +139,7 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.15674266475231,
     "plays": 2,
-    "path": "/games/unity-1777352998344-mx-offroad-master/index.html"
+    "path": `${CDN}/games/unity-1777352998344-mx-offroad-master/index.html`
   },
   {
     "id": "unity-1777353003870-sandbox-city---cars-zombies-ragdolls",
@@ -146,7 +148,7 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.8677146485429965,
     "plays": 2,
-    "path": "/games/unity-1777353003870-sandbox-city---cars-zombies-ragdolls/index.html"
+    "path": `${CDN}/games/unity-1777353003870-sandbox-city---cars-zombies-ragdolls/index.html`
   },
   {
     "id": "unity-1777353019951-doodle-road",
@@ -155,16 +157,16 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.973651754544181,
     "plays": 2,
-    "path": "/games/unity-1777353019951-doodle-road/index.html"
+    "path": `${CDN}/games/unity-1777353019951-doodle-road/index.html`
   },
   {
     "id": "unity-1777353029986-ramp-car-vs-police-chase-psm",
     "title": "Ramp Car VS Police: CHASE",
-    "description": "Experience a dangerous police chase as you drive a ramp car or a wedge truck through chaotic traffic.Game ModesChase: Start with a wanted level of 1 and cause as much chaos as possible.",
+    "description": "Experience a dangerous police chase as you drive a ramp car or a wedge truck through chaotic traffic.",
     "category": "Other",
     "rating": 4.947499812709678,
     "plays": 2,
-    "path": "/games/unity-1777353029986-ramp-car-vs-police-chase-psm/index.html"
+    "path": `${CDN}/games/unity-1777353029986-ramp-car-vs-police-chase-psm/index.html`
   },
   {
     "id": "unity-1777353035200-driving-school-simulator",
@@ -173,16 +175,16 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.947410148233839,
     "plays": 2,
-    "path": "/games/unity-1777353035200-driving-school-simulator/index.html"
+    "path": `${CDN}/games/unity-1777353035200-driving-school-simulator/index.html`
   },
   {
     "id": "unity-1777353055132-escape-road-asm",
     "title": "Escape Road",
-    "description": "If you’re up for a high-speed chase throughout a cityscape, then Escape Road, a getaway driving game, is right up your alley. This high-speed car chase game will get your adrenaline pumping as soon as you put your foot on the gas.",
+    "description": "If you're up for a high-speed chase throughout a cityscape, then Escape Road, a getaway driving game, is right up your alley.",
     "category": "Other",
     "rating": 4.490013948503884,
     "plays": 2,
-    "path": "/games/unity-1777353055132-escape-road-asm/index.html"
+    "path": `${CDN}/games/unity-1777353055132-escape-road-asm/index.html`
   },
   {
     "id": "unity-1777353345386-escape-road-2",
@@ -191,16 +193,16 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.772514892777115,
     "plays": 2,
-    "path": "/games/unity-1777353345386-escape-road-2/index.html"
+    "path": `${CDN}/games/unity-1777353345386-escape-road-2/index.html`
   },
   {
     "id": "html-1777353414239-bloxdhop-io",
     "title": "Bloxd io",
-    "description": "Bloxd.io is an IO adventure game with Minecraft-style visuals where you can navigate obstacle courses, gather resources, craft tools, battle other players, and much more. With game modes ranging from parkour challenges and creative sandbox building to combat-based gameplay, there&#x27;s something for every playstyle.How to Play Bloxd.ioThe best way to start playing Bloxd.io is to gather wood, your most essential early resource and useful even in caves.",
+    "description": "Bloxd.io is an IO adventure game with Minecraft-style visuals where you can navigate obstacle courses, gather resources, craft tools, battle other players, and much more.",
     "category": "Other",
     "rating": 4.673976275811827,
     "plays": 2,
-    "path": "/games/html-1777353414239-bloxdhop-io/index.html"
+    "path": `${CDN}/games/html-1777353414239-bloxdhop-io/index.html`
   },
   {
     "id": "unity-1777353417559-hazmob-fps-online-shooter",
@@ -209,16 +211,16 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.502870760133082,
     "plays": 2,
-    "path": "/games/unity-1777353417559-hazmob-fps-online-shooter/index.html"
+    "path": `${CDN}/games/unity-1777353417559-hazmob-fps-online-shooter/index.html`
   },
   {
     "id": "html-1777353426048-tileman-io",
     "title": "TileMan.io",
-    "description": "TileMan.io is an awesome multiplayer IO game in which you must try to claim as much territory as possible. You start with a random block color, and you must try to convert all the blocks on the map into the same color.",
+    "description": "TileMan.io is an awesome multiplayer IO game in which you must try to claim as much territory as possible.",
     "category": "Other",
     "rating": 4.603052837591642,
     "plays": 2,
-    "path": "/games/html-1777353426048-tileman-io/index.html"
+    "path": `${CDN}/games/html-1777353426048-tileman-io/index.html`
   },
   {
     "id": "unity-1777353438299-squid-game-online",
@@ -227,16 +229,16 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.651540092023903,
     "plays": 30,
-    "path": "/games/unity-1777353438299-squid-game-online/index.html"
+    "path": `${CDN}/games/unity-1777353438299-squid-game-online/index.html`
   },
   {
     "id": "html-1777353448657-openfront-gsw",
     "title": "Openfront",
-    "description": "Openfront.io is an IO battle game where you expand your territory, build up your economy, forge alliances, and drop bombs to dominate the map.How to Play OpenfrontBefore jumping in, you&#x27;ll choose how you want to play. You can dive into a solo game, create a private lobby, or join an existing one.",
+    "description": "Openfront.io is an IO battle game where you expand your territory, build up your economy, forge alliances, and drop bombs to dominate the map.",
     "category": "Other",
     "rating": 4.8708942563526705,
     "plays": 2,
-    "path": "/games/html-1777353448657-openfront-gsw/index.html"
+    "path": `${CDN}/games/html-1777353448657-openfront-gsw/index.html`
   },
   {
     "id": "unity-1777353453630-buildnow-gg",
@@ -245,79 +247,79 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.795897046355738,
     "plays": 6,
-    "path": "/games/unity-1777353453630-buildnow-gg/index.html"
+    "path": `${CDN}/games/unity-1777353453630-buildnow-gg/index.html`
   },
   {
     "id": "html-1777353458932-frontwars-io",
     "title": "FrontWars.io",
-    "description": "FrontWars.io is a multiplayer .io battle game where players battle it out to dominate as much of the globe as possible. You begin small and slowly work your way to conquer the world.",
+    "description": "FrontWars.io is a multiplayer .io battle game where players battle it out to dominate as much of the globe as possible.",
     "category": "Other",
     "rating": 4.430314209797023,
     "plays": 2,
-    "path": "/games/html-1777353458932-frontwars-io/index.html"
+    "path": `${CDN}/games/html-1777353458932-frontwars-io/index.html`
   },
   {
     "id": "unity-1777353462089-skillwarz",
     "title": "SkillWarz",
-    "description": "SkillWarz is a fast-paced first-person shooter offering advanced movement mechanics and diverse game modes like Deathmatch, Gun Game, and Skull Hunt. Navigate through dynamic day and night maps featuring bounce pads, teleports, and battle pickups.",
+    "description": "SkillWarz is a fast-paced first-person shooter offering advanced movement mechanics and diverse game modes like Deathmatch, Gun Game, and Skull Hunt.",
     "category": "Other",
     "rating": 4.931653898256167,
     "plays": 2,
-    "path": "/games/unity-1777353462089-skillwarz/index.html"
+    "path": `${CDN}/games/unity-1777353462089-skillwarz/index.html`
   },
   {
     "id": "html-1777353467765-99-nights-bloxd-io",
     "title": "99 Nights (Bloxd.io)",
-    "description": "99 Nights is an action-adventure game where your survival skills are put to the test, and nighttime creatures attack you after dark. Gather resources, weapons &amp;amp; build your defenses along with other players while you unlock tools to help you level up and protect your base.",
+    "description": "99 Nights is an action-adventure game where your survival skills are put to the test, and nighttime creatures attack you after dark.",
     "category": "Other",
     "rating": 4.7788969664300724,
     "plays": 2,
-    "path": "/games/html-1777353467765-99-nights-bloxd-io/index.html"
+    "path": `${CDN}/games/html-1777353467765-99-nights-bloxd-io/index.html`
   },
   {
     "id": "unity-1777353470822-mr-dude-online-multiverse-challenge",
     "title": "Mr. Dude: Online Multiverse Challenge",
-    "description": "Mr. Dude:",
+    "description": "Mr. Dude: Online Multiverse Challenge is a fun multiplayer game.",
     "category": "Other",
     "rating": 4.435375648559772,
     "plays": 2,
-    "path": "/games/unity-1777353470822-mr-dude-online-multiverse-challenge/index.html"
+    "path": `${CDN}/games/unity-1777353470822-mr-dude-online-multiverse-challenge/index.html`
   },
   {
     "id": "html-1777353474687-escape-tsunami-for-brainrots-wfe",
     "title": "Escape Tsunami for Brainrots!",
-    "description": "Escape Tsunami for Brainrots is a multiplayer game where you race to collect Brainrots before a massive wave destroys you. Can you be quick enough?",
+    "description": "Escape Tsunami for Brainrots is a multiplayer game where you race to collect Brainrots before a massive wave destroys you.",
     "category": "Other",
     "rating": 4.44808882194455,
     "plays": 2,
-    "path": "/games/html-1777353474687-escape-tsunami-for-brainrots-wfe/index.html"
+    "path": `${CDN}/games/html-1777353474687-escape-tsunami-for-brainrots-wfe/index.html`
   },
   {
     "id": "html-1777353477985-meeland-io",
     "title": "Meeland.io",
-    "description": "Meeland.io is a growing game-mode platform that invites you to build wealth through its lively Pet Tycoon experience. You’ll buy pets and eggs, earn steady income, and reinvest your profits to unlock stronger upgrades.",
+    "description": "Meeland.io is a growing game-mode platform that invites you to build wealth through its lively Pet Tycoon experience.",
     "category": "Other",
     "rating": 4.396293208645584,
     "plays": 2,
-    "path": "/games/html-1777353477985-meeland-io/index.html"
+    "path": `${CDN}/games/html-1777353477985-meeland-io/index.html`
   },
   {
     "id": "html-1777353480737-grow-a-garden---growden-io",
     "title": "Grow a Garden | Growden.io",
-    "description": "Growden.io is an .io farming game where you manage a small plot of land, starting off with some carrot seeds and a vision for success! This community-based game is based on progressive management of your farm, so be sure to stay logged in to get the whole experience.",
+    "description": "Growden.io is an .io farming game where you manage a small plot of land, starting off with some carrot seeds and a vision for success!",
     "category": "Other",
     "rating": 4.423257338589057,
     "plays": 2,
-    "path": "/games/html-1777353480737-grow-a-garden---growden-io/index.html"
+    "path": `${CDN}/games/html-1777353480737-grow-a-garden---growden-io/index.html`
   },
   {
     "id": "unity-1777353529374-jelly-dash-uki",
     "title": "Jelly Dash",
-    "description": "Jelly Dash is a fast-paced multiplayer racing game where gooey, jelly-like characters swing, stretch, and dash to the finish line! With one-finger gameplay, it’s super easy to learn but packed with competitive action as you race against players worldwide.",
+    "description": "Jelly Dash is a fast-paced multiplayer racing game where gooey, jelly-like characters swing, stretch, and dash to the finish line!",
     "category": "Other",
     "rating": 4.539493020088534,
     "plays": 2,
-    "path": "/games/unity-1777353529374-jelly-dash-uki/index.html"
+    "path": `${CDN}/games/unity-1777353529374-jelly-dash-uki/index.html`
   },
   {
     "id": "html-1777353815024-basketbros",
@@ -326,52 +328,52 @@ export const games: Game[] = [
     "category": "Other",
     "rating": 4.583755900231723,
     "plays": 2,
-    "path": "/games/html-1777353815024-basketbros/index.html"
+    "path": `${CDN}/games/html-1777353815024-basketbros/index.html`
   },
   {
     "id": "unity-1777353823782-basketball-superstars",
     "title": "Basketball Superstars",
-    "description": "Basketball Superstars is a dynamic basketball experience where you create and train your ultimate player. Customize your gear, enhance your skills, and face intense rivals in fast-paced matches.",
+    "description": "Basketball Superstars is a dynamic basketball experience where you create and train your ultimate player.",
     "category": "Other",
     "rating": 4.08987986128389,
     "plays": 2,
-    "path": "/games/unity-1777353823782-basketball-superstars/index.html"
+    "path": `${CDN}/games/unity-1777353823782-basketball-superstars/index.html`
   },
   {
     "id": "unity-1777353828014-unmatched-basketball",
     "title": "Unmatched Basketball",
-    "description": "Unmatched Basketball is a thrilling 3v3 third-person basketball experience where quick reflexes and flashy moves decide the game. You’ll dribble past defenders, block shots, and pull off outrageous trick plays while customizing your own basketball legend with unique styles and abilities.",
+    "description": "Unmatched Basketball is a thrilling 3v3 third-person basketball experience where quick reflexes and flashy moves decide the game.",
     "category": "Other",
     "rating": 4.030745364242178,
     "plays": 2,
-    "path": "/games/unity-1777353828014-unmatched-basketball/index.html"
+    "path": `${CDN}/games/unity-1777353828014-unmatched-basketball/index.html`
   },
   {
     "id": "unity-1777353835402-hoop-world-3d",
     "title": "Hoop World 3D",
-    "description": "Hoop World 3D is a flip-and-dunk game that brings basketball to a whole new dimension! Get your timing right or you&amp;#39;ll fall short of the net and fall flat on your face. How to Play Hoop World 3D Hoop World 3D is fairly easy to maneuver and easy to learn.",
+    "description": "Hoop World 3D is a flip-and-dunk game that brings basketball to a whole new dimension!",
     "category": "Other",
     "rating": 4.831251513062908,
     "plays": 2,
-    "path": "/games/unity-1777353835402-hoop-world-3d/index.html"
+    "path": `${CDN}/games/unity-1777353835402-hoop-world-3d/index.html`
   },
   {
     "id": "unity-1777353845114-basketball-skills",
     "title": "Basketball Skills",
-    "description": "Basketball Skills is the basketball arcade game in which you must try to score baskets in all the different game modes available. You can play either arcade, time attack, and distance mode.",
+    "description": "Basketball Skills is the basketball arcade game in which you must try to score baskets in all the different game modes available.",
     "category": "Other",
     "rating": 4.743041598987272,
     "plays": 2,
-    "path": "/games/unity-1777353845114-basketball-skills/index.html"
+    "path": `${CDN}/games/unity-1777353845114-basketball-skills/index.html`
   },
   {
     "id": "unity-1777353848644-ragdoll-throw-challenge",
     "title": "Ragdoll Throw Challenge",
-    "description": "Ragdoll Throw Challenge is a physics-based casual game where you control a wobbly character, help them grab weapons, and fling them at your enemies for ultimate chaos and fun! The gameplay is simple, but movements can be complex and challenging to master.How to Play Ragdoll Throw ChallengeThere are several challenges you can choose from at the start of the game, all of which are quite different from each other but have a common thread:",
+    "description": "Ragdoll Throw Challenge is a physics-based casual game where you control a wobbly character, help them grab weapons, and fling them at your enemies for ultimate chaos and fun!",
     "category": "Other",
     "rating": 4.305988427018703,
     "plays": 2,
-    "path": "/games/unity-1777353848644-ragdoll-throw-challenge/index.html"
+    "path": `${CDN}/games/unity-1777353848644-ragdoll-throw-challenge/index.html`
   }
 ];
 
@@ -394,4 +396,3 @@ export const categories = [
 
 // Alias for compatibility
 export const allGames = games;
-
